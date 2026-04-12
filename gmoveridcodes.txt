@@ -5,3 +5,7 @@ waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:id" ?result "dc
 10u da el W fa lw el w b x nano e3mel /xn
 3) vgs vs gm/id
 waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:vgs" ?result "dc"))
+
+same concept goes m3a ay 7aga 
+bstsa5dem waveVsWave function we el x axis bykoon select x trace
+we el y axis bykoon select y trace
