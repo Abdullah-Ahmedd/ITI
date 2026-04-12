@@ -1,0 +1,7 @@
+1) gmro vs gm/id
+waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:gm" ?result "dc")*getData("M0:rout" ?result "dc"))
+2)id/w vs gm/id
+waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:id" ?result "dc")/10u)
+10u da el W fa lw el w b x nano e3mel /xn
+3) vgs vs gm/id
+waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:vgs" ?result "dc"))
