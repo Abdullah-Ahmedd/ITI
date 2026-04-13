@@ -1,3 +1,6 @@
+Note: before you start with this you must do a dc analysis and make a sweep on vgs from 0 to VDD
+and after that make a parameteric sweep on L of the transistor in your testbench you are getting the values for 
+(do a resonable range "mafish rakam mo7dad ya3ny")
 1) gmro vs gm/id
 waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:gm" ?result "dc")*getData("M0:rout" ?result "dc"))
 2)id/w vs gm/id
