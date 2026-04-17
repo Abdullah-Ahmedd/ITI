@@ -12,3 +12,15 @@ waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:vgs" ?result "d
 same concept goes m3a ay 7aga 
 bstsa5dem waveVsWave function we el x axis bykoon select x trace
 we el y axis bykoon select y trace
+
+
+
+ZAGLOUL's VERSION
+gm/id_n: (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc"))
+ID/W_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:id" ?result "dc") / 1e-06))
+gmro_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:gm" ?result "dc") / getData("M0:gds" ?result "dc")))
+gm/id_p: abs((getData("M1:gm" ?result "dc") / getData("M1:id" ?result "dc")))
+ID/W_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (abs(getData("M1:id" ?result "dc")) / 1e-06))
+gmro_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (getData("M1:gm" ?result "dc") / getData("M1:gds" ?result "dc")))
+VGS_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:vgs" ?result "dc") / 1))
+VGS_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (abs(getData("M1:vgs" ?result "dc")) / 1))
