@@ -1,26 +1,28 @@
 Note: before you start with this you must do a dc analysis and make a sweep on vgs from 0 to VDD
 and after that make a parameteric sweep on L of the transistor in your testbench you are getting the values for 
 (do a resonable range "mafish rakam mo7dad ya3ny")
-1) gmro vs gm/id
+1) gm/id (for NMOS)
+getData("M0:gmoverid" ?result "dc")
+2) gmro vs gm/id (for NMOS)
 waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:gm" ?result "dc")*getData("M0:rout" ?result "dc"))
-2)id/w vs gm/id
+3)id/w vs gm/id (for NMOS)
 waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:id" ?result "dc")/10u)
 10u da el W fa lw el w b x nano e3mel /xn
-3) vgs vs gm/id
+4) vgs vs gm/id (for NMOS)
 waveVsWave(?x getData("M0:gmoverid" ?result "dc") ?y getData("M0:vgs" ?result "dc"))
 
+5) gm/id (for PMOS)
+getData("M1:gmoverid" ?result "dc")
+6) gmro vs gm/id (for PMOS)
+waveVsWave(?x getData("M1:gmoverid" ?result "dc") ?y getData("M1:gm" ?result "dc")*getData("M1:rout" ?result "dc"))
+7)id/w vs gm/id (for PMOS)
+waveVsWave(?x getData("M1:gmoverid" ?result "dc") ?y getData("M1:id" ?result "dc")/10u)
+10u da el W fa lw el w b x nano e3mel /xn
+8) vgs vs gm/id (for PMOS)
+waveVsWave(?x getData("M1:gmoverid" ?result "dc") ?y getData("M1:vgs" ?result "dc"))
 same concept goes m3a ay 7aga 
 bstsa5dem waveVsWave function we el x axis bykoon select x trace
 we el y axis bykoon select y trace
 
 
 
-ZAGLOUL's VERSION
-gm/id_n: (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc"))
-ID/W_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:id" ?result "dc") / 1e-06))
-gmro_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:gm" ?result "dc") / getData("M0:gds" ?result "dc")))
-gm/id_p: abs((getData("M1:gm" ?result "dc") / getData("M1:id" ?result "dc")))
-ID/W_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (abs(getData("M1:id" ?result "dc")) / 1e-06))
-gmro_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (getData("M1:gm" ?result "dc") / getData("M1:gds" ?result "dc")))
-VGS_n: waveVsWave(?x (getData("M0:gm" ?result "dc") / getData("M0:id" ?result "dc")) ?y (getData("M0:vgs" ?result "dc") / 1))
-VGS_p: waveVsWave(?x (getData("M1:gm" ?result "dc") / abs(getData("M1:id" ?result "dc"))) ?y (abs(getData("M1:vgs" ?result "dc")) / 1))
