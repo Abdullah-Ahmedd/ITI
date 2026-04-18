@@ -1,5 +1,5 @@
 Note: before you start with this you must do a dc analysis and make a sweep on vgs from 0 to VDD
-and after that make a parameteric sweep on L of the transistor in your testbench you are getting the values for 
+and after that make a parameteric sweep on L (from the global variables) of the transistor in your testbench you are getting the values for 
 (do a resonable range "mafish rakam mo7dad ya3ny")
 1) gm/id (for NMOS)
 getData("M0:gmoverid" ?result "dc")
